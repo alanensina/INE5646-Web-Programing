@@ -24,8 +24,17 @@ class Pessoa {
  * @param number idadeLimite
  * @returns [Pessoa]
  */
-function selecionaPessoas (pessoas, idadeLimite) {
-  return pessoas
+function selecionaPessoas (pessoas, idadeMinima) {
+  
+  var pessoas2 = []
+  
+  pessoas.forEach(element => {
+    if(element.idade > idadeMinima){
+      pessoas2.push(element)
+    }
+  });
+  
+  return pessoas2
 }
 
 // Dados fictícios
