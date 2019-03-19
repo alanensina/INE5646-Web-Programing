@@ -1,0 +1,19 @@
+{
+  "name": "app-pessoas",
+  "version": "1.0.0",
+  "description": "UFSC-INE-INE5646 - Exercício pessoas",
+  "scripts": {
+    "build": "babel src -d build",
+    "start": "nodemon --exec npx babel-node src/app.js"
+  },
+  "author": "Prof. Leandro J. Komosinski",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.0",
+    "@babel/node": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "eslint": "^5.9.0",
+    "nodemon": "^1.18.7"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "app_livros_servidor",
+  "version": "1.0.0",
+  "description": "Aplicação que acessa base de dados MongoDB via Mongoose",
+  "scripts": {
+    "start": "nodemon --exec npx babel-node src/app.js",
+    "build": "babel src -d build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Mongoose"
+  ],
+  "author": "Leandro J. Komosinski",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.16"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.7",
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.0",
+    "@babel/node": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "eslint": "^5.9.0"
+  }
+}
