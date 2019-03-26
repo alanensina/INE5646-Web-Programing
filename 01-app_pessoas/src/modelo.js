@@ -25,10 +25,7 @@ class Pessoa {
  * @returns [Pessoa]
  */
 function selecionaPessoas(pessoas, idadeMinima) {
-
-  const filtroIdade = p => p.idade > idadeMinima
-
-  return pessoas.filter(filtroIdade)
+  return pessoas.filter(p => p.idade > idadeMinima)
 }
 
 // Dados fictícios
