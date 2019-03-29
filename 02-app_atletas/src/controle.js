@@ -17,7 +17,8 @@ function consultaInicial (res, dados) {
  */
 function consultaPesquisaPorAltura (req, res, dados) {
   // Dica: req.query contém a informação que está faltando.
-  const alturaInformada = '175'
+  
+  const alturaInformada = parseInt(req.query.altura_minima) // Resposta do exercício
   const alturaMinima = parseInt(alturaInformada)
   const atletas = dados.equipe.encontreAtletasComAlturmaMinima(alturaMinima)
   const resposta = {
