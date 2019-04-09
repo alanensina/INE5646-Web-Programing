@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import {BotaoDetalhes} from './BotaoDetalhes.jsx'
+import { BotaoDetalhes } from './BotaoDetalhes.jsx'
 
 class FilmesCadastrados extends React.Component {
-  render () {
+  render() {
     let conteudo
 
     if (this.props.titulos === undefined || this.props.titulos.length === 0) {
@@ -33,19 +33,19 @@ class FilmesCadastrados extends React.Component {
   }
 
   // monta a tabela com os títulos dos filmes
-  __monteTabela (titulos, idFilmeSelecionado, onClick) {
+  __monteTabela(titulos, idFilmeSelecionado, onClick) {
     let tabela =
-    <table className="table is-striped is-hoverable is-fullwidth">
-      <tbody>
-        {titulos.map(idTitulo => this.__monteLinha(idFilmeSelecionado, idTitulo, onClick))}
-      </tbody>
-    </table>
+      <table className="table is-striped is-hoverable is-fullwidth">
+        <tbody>
+          {titulos.map(idTitulo => this.__monteLinha(idFilmeSelecionado, idTitulo, onClick))}
+        </tbody>
+      </table>
 
     return tabela
   }
 
   // monta uma linha contendo o título do filme
-  __monteLinha (idFilmeSelecionado, idTitulo, onClick) {
+  __monteLinha(idFilmeSelecionado, idTitulo, onClick) {
     let linha =
       <tr key={idTitulo.id}>
         <td>{idTitulo.titulo}</td>
@@ -58,11 +58,12 @@ class FilmesCadastrados extends React.Component {
   }
 
   // monta o botão detalhes da linha
-  __monteBotao (idFilmeSelecionado, idFilme, onClick) {
-    let botao
+  __monteBotao(idFilmeSelecionado, idFilme, onClick) {
+    let botao = null
 
-    botao = <BotaoDetalhes id={idFilme} onClick={onClick}/>
-
+    if (idFilmeSelecionado !== idFilme) {
+      botao = <BotaoDetalhes id={idFilme} onClick={onClick} />
+    }
     return botao
   }
 }
@@ -71,4 +72,4 @@ FilmesCadastrados.propTypes = {
   titulos: PropTypes.array
 }
 
-export {FilmesCadastrados}
+export { FilmesCadastrados }
