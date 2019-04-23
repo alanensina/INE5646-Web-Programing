@@ -23,9 +23,10 @@ class App extends Component {
   }
 
   componentDidMount () {
-    // FIXME use window.fetch para obter o valor chave para API da Nasa.
-    // com o valor recebido do servidor, atualize o estado do componente App
-    console.log('// FIXME falta obter a chave da API da Nasa')
+    // Correção:
+    fetch('/chave')
+    .then(r => r.json())
+    .then(chave =>this.setState({nasaApiKey:chave}))
   }
 
   podePesquisar () {
