@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import MongoClient from 'mongodb'
 //FIXME Descomente para importar o módulo crypto
-//import crypto from 'crypto'
+import crypto from 'crypto'
 
 const BD_URL = process.env.BD_URL
 let client
@@ -27,7 +27,10 @@ let db
 function criptografaSenha (senha) {
   //FIXME Use o método scryptSync definido no módulo crypto do Node para
   // criptografar a senha informada pelo usuário. Consulte a documentação do Node.
-  return senha
+var crypto = require('crypto')
+var novaSenha = crypto.createHash('md5').update(senha).digest('hex')
+
+  return novaSenha
 }
 
 const COL_USUARIOS = 'usuarios'
