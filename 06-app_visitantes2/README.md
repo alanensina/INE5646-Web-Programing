@@ -1,14 +1,18 @@
 ### UFSC - CTC - INE - INE5646 Programação para Web
-# Exercício App Visitantes2
+# Exercício App Visitantes
 
-A aplicação mostra um gráfico de barras que exibe quantas pessoas visitaram um site em um conjunto de meses. Os dados, fictícios, são obtidos no servidor. 
+A aplicação mostra um gráfico de barras que exibe quantas pessoas visitaram um site em um conjunto de meses. Os dados, fictícios e aleatórios, são obtidos do servidor. 
 
 
 ## Objetivo do Exercício
 Mostrar uma aplicação do tipo SPA (*Single Page Application*) que utiliza a bilioteca de componentes React [PrimeReact](https://www.primefaces.org/primereact/#/). O componente que exibe o gráfico utiliza a bilioteca [Chart.js](https://www.chartjs.org/)
 
 ## Sua Tarefa
-No código atual o gráfico não exibe nenhum dado. Sua tarefa é descobrir por que isso acontece e, lendo a documentação sobre o componente **Chart**, fazer com que os dados obtidos no servidor sejam exibidos corretamente.
+A aplicação funciona corretamente mas tem uma característica: os dados
+vindos do servidor demoram pouco mais de 3 segundos para chegar. Durante
+esse tempo nenhuma informação é exibida para o usuário. Sua tarefa é
+reorganizar o código do lado cliente criando um terceiro estado (por exemplo 'PESQUISANDO') e exibir uma mensagem ao usuário avisando que os 
+dados estão sendo lidos.
 
 ## Instruções
 Depois de baixar/clonar o respositório, entre no diretório **cliente** e digite
@@ -28,11 +32,12 @@ para instalar os pacotes JavaScript utiliados pelo lado servidor da aplicação.
 O desenvolvimento da aplicação envolve duas frentes de trabalho: a programação necessária para o lado cliente e a programação necessária para o lado servidor.
 
 #### Lado Cliente
-Para iniciar o desenvolvimento do lado cliente entre no diretório **cliente ** e digite
+Para iniciar o desenvolvimento do lado cliente entre no diretório **cliente** e digite
 
 `npm start`
 
-Cada vez que um arquivo no lado cliente for alterado o webpack será acionado para gerar uma nova versão do arquivo bundle.js.
+Cada vez que um arquivo no lado cliente for alterado o *webpack* será acionado para gerar uma nova versão dos arquivos necessários para o lado cliente. Estes arquivos estão armazenados
+no diretório **publico** dentro do diretório **servidor**.
 
 #### Lado Servidor
 Para iniciar o desenvolvimento do lado servidor entre no diretório **servidor** e digite

@@ -5,6 +5,7 @@
         {
           "useBuiltIns": "usage",
           "debug": true,
+          "corejs": 3,
           "targets": "last 2 versions, not dead, > 20%"
         }
       ],

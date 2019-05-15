@@ -2,4 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App  from './visao/App.jsx'
 
-ReactDOM.render(<App/>, document.getElementById('app'))
+const elem = document.createElement('div')
+
+document.body.append(elem)
+ReactDOM.render(<App/>, elem)
